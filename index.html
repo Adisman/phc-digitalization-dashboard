@@ -239,7 +239,7 @@ function render(){
   document.getElementById('critbox').innerHTML=cf.length?`<b>${cf.length} critical-gap facility(ies)</b> — overall ≥60% but Power/Connectivity (D2) or Devices (D3) below 50%:<ul>`+cf.map(f=>`<li>${f.facility_name} — ${fmt(f.total_pct,0)}% · D2 ${fmt(f.D2_pct,0)} · D3 ${fmt(f.D3_pct,0)}</li>`).join('')+'</ul>':'<b>No critical gaps in view.</b>';
 
   buildFacSel(fac);drawRadar(fac);drawMap(fac);
-  document.getElementById('foot').innerHTML=`Senegal baseline · ${STATE.facilities.length} records loaded (${included().length} analysed, ${excluded} empty/test). Scores: Yes=1, Partially=0.5, No=0; N/A excluded from the denominator; domains equal-weighted. Africa CDC · SD4H.`;
+  document.getElementById('foot').innerHTML=`Baseline · ${STATE.facilities.length} records loaded (${included().length} analysed, ${excluded} empty/test). Scores: Yes=1, Partially=0.5, No=0; N/A excluded from the denominator; domains equal-weighted. Africa CDC · SD4H.`;
 }
 function buildFacSel(fac){const s=document.getElementById('facsel');if(!fac.find(f=>(f.record_id+'')===(STATE.selFac+'')))STATE.selFac=fac.length?fac[0].record_id:null;s.innerHTML=fac.map(f=>`<option value="${f.record_id}" ${(f.record_id+'')===(STATE.selFac+'')?'selected':''}>${f.facility_name}</option>`).join('');s.onchange=()=>{STATE.selFac=s.value;drawRadar(filtered());};}
 window.pick=id=>{STATE.selFac=id;const fac=filtered();buildFacSel(fac);drawRadar(fac);document.getElementById('radar').scrollIntoView({behavior:'smooth',block:'center'});};

@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PHC Digitalization Baseline Readiness — Dashboard</title>
+<title>PHC Digitalization Readiness — Senegal Baseline Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -70,17 +70,13 @@ footer{margin-top:26px;font-size:11.5px;color:var(--mut);border-top:1px solid va
 input[type=file]{color:#eaf3ea;font-size:12px}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.two,.three{grid-template-columns:1fr}}
 </style></head>
-<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; margin-bottom: 15px; width: 100%;">
-    
-    <img src="acdc_logo.png" alt="Africa CDC Logo" style="height: 75px; width: auto; display: block;">
-    
-    <div>
-        <div class="eyebrow" style="margin: 0 0 4px 0; padding: 0; font-weight: 700; letter-spacing: 0.5px;">Africa CDC &middot; Digital Health and Information System &middot;</div>
-        <h1 style="margin: 0; padding: 0; font-size: inherit; font-weight: 800; line-height: 1.3;">PHC Facility Digitalization Baseline Readiness — Dashboard</h1>
-    </div>
-
-</div>
-</div>
+<body>
+<header><div class="head-in">
+<div class="eyebrow">Africa CDC &middot; Digital Health and Information System &middot;</div>
+<h1>PHC Facility Digitalization Baseline Readiness — Dashboard</h1>
+<div class="sub">Live from the REDCap assessment export. Use “Add / update data” to load the remaining facilities as they are collected.</div>
+<div class="filters" id="filters"></div>
+<div id="updwrap">
   <div class="note">Export the latest data dictionary results from REDCap (CSV), then either choose the file or paste its contents below and click <b>Load</b>. The dashboard rebuilds with all facilities in the file.</div>
   <div class="row" style="margin-top:8px">
     <input type="file" id="updfile" accept=".csv,text/csv">

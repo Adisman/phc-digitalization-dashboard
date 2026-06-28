@@ -72,9 +72,21 @@ input[type=file]{color:#eaf3ea;font-size:12px}
 </style></head>
 <body>
 <header><div class="head-in">
-<div class="eyebrow">Africa CDC &middot; Digital Health and Information System &middot;</div>
-<h1>PHC Facility Digitalization Baseline Readiness — Dashboard</h1>
-    <img src="acdc_logo.png" alt="Organization Logo" style="height: 60px; width: auto; margin-bottom: 15px;">
+
+<!-- Logo and Title Horizontal Layout Container -->
+<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 15px; flex-wrap: wrap;">
+    
+    <!-- The Logo -->
+    <img src="acdc_logo.png" alt="Africa CDC Logo" style="height: 70px; width: auto; flex-shrink: 0;">
+    
+    <!-- The Text Group -->
+    <div style="flex: 1; min-width: 280px;">
+        <div class="eyebrow" style="margin-bottom: 2px;">Africa CDC &middot; Digital Health and Information System &middot;</div>
+        <h1 style="margin: 0; padding: 0; font-size: inherit; line-height: 1.2;">PHC Facility Digitalization Baseline Readiness — Dashboard</h1>
+    </div>
+
+</div>
+
 <div class="sub">Live from the REDCap assessment export. Use “Add / update data” to load the remaining facilities as they are collected.</div>
 <div class="filters" id="filters"></div>
 <div id="updwrap">

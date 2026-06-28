@@ -71,18 +71,17 @@ input[type=file]{color:#eaf3ea;font-size:12px}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.two,.three{grid-template-columns:1fr}}
 </style></head>
 <body>
-<div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 90px; margin-bottom: 25px; padding: 10px 0; width: 100%;">
-    
-    <div style="position: absolute; left: 0; flex-shrink: 0;">
-        <img src="acdc_logo.png" alt="Africa CDC Logo" style="height: 85px; width: auto; display: block;">
-    </div>
-    
-    <div style="max-width: 80%; padding: 0 20px;">
-        <div class="eyebrow" style="margin: 0 0 6px 0; padding: 0; font-weight: 700; font-size: 1.15rem; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.95;">Africa CDC &middot; Digital Health and Information System &middot;</div>
-        <h1 style="margin: 0; padding: 0; font-size: 2.3rem; font-weight: 800; line-height: 1.25; letter-spacing: -0.5px;">PHC Facility Digitalization Baseline Readiness — Dashboard</h1>
-    </div>
-
-</div>
+<header><div class="head-in">
+<div class="eyebrow">Africa CDC &middot; Digital Health and Information System &middot;</div>
+<h1>PHC Facility Digitalization Baseline Readiness — Dashboard</h1>
+<div class="sub">Live from the REDCap assessment export. Use “Add / update data” to load the remaining facilities as they are collected.</div>
+<div class="filters" id="filters"></div>
+<div id="updwrap">
+  <div class="note">Export the latest data dictionary results from REDCap (CSV), then either choose the file or paste its contents below and click <b>Load</b>. The dashboard rebuilds with all facilities in the file.</div>
+  <div class="row" style="margin-top:8px">
+    <input type="file" id="updfile" accept=".csv,text/csv">
+    <button class="btn upd" id="updload">Load file / pasted data</button>
+    <button class="btn reset" id="updappend">Append instead of replace</button>
   </div>
   <textarea id="updtext" placeholder="…or paste the full CSV text here (including the header row)"></textarea>
   <div id="updstatus"></div>

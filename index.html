@@ -70,20 +70,16 @@ footer{margin-top:26px;font-size:11.5px;color:var(--mut);border-top:1px solid va
 input[type=file]{color:#eaf3ea;font-size:12px}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.two,.three{grid-template-columns:1fr}}
 </style></head>
-<!-- Main horizontal alignment box -->
-<div style="display: flex; flex-direction: row; align-items: center; gap: 20px; margin-bottom: 15px;">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; margin-bottom: 15px; width: 100%;">
     
-    <!-- 1. The Logo on the left -->
-    <div style="flex-shrink: 0;">
-        <img src="acdc_logo.png" alt="Africa CDC Logo" style="height: 70px; width: auto; display: block;">
-    </div>
+    <img src="acdc_logo.png" alt="Africa CDC Logo" style="height: 75px; width: auto; display: block;">
     
-    <!-- 2. The Text Block on the right -->
-    <div style="display: flex; flex-direction: column; justify-content: center;">
-        <div class="eyebrow" style="margin: 0 0 2px 0; padding: 0;">Africa CDC &middot; Digital Health and Information System &middot;</div>
-        <h1 style="margin: 0; padding: 0; font-size: inherit; line-height: 1.2;">PHC Facility Digitalization Baseline Readiness — Dashboard</h1>
+    <div>
+        <div class="eyebrow" style="margin: 0 0 4px 0; padding: 0; font-weight: 700; letter-spacing: 0.5px;">Africa CDC &middot; Digital Health and Information System &middot;</div>
+        <h1 style="margin: 0; padding: 0; font-size: inherit; font-weight: 800; line-height: 1.3;">PHC Facility Digitalization Baseline Readiness — Dashboard</h1>
     </div>
 
+</div>
 </div>
   <div class="note">Export the latest data dictionary results from REDCap (CSV), then either choose the file or paste its contents below and click <b>Load</b>. The dashboard rebuilds with all facilities in the file.</div>
   <div class="row" style="margin-top:8px">
